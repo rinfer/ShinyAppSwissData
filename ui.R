@@ -1,4 +1,4 @@
-#Swiss-Data
+#Swiss-Data UI
 library(shiny)
 
 shinyUI(
@@ -32,7 +32,7 @@ shinyUI(
             
             checkboxInput("p1", "Show plot for unajusted effect", value = T),
             checkboxInput("p2", "Show residual plot", value = T),
-            
+            h5("Uncheck both plots for map of French speaking region of Switzerland."),
             submitButton('Submit')
         ),
         
@@ -54,17 +54,15 @@ shinyUI(
                                  h4("Functionality"),
                                  h5("You can choose the y and two x variables from the six variables of the dataset"),
                                  h6("* Fertility: a common standardized fertility measure" , br(), "* Agriculture: percent of males involved in agriculture as occupation" , br(), "* Examination: percent draftees receiving highest on army examination" , br(), "* Education: percent education beyond primary school for draftees" , br(), "* Catholic: percent catholic (as opposed to protestant)" , br(), "* Infant.Mortality: live births who live less than 1 year"),
-                                 h6("(See for more details the website https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/swiss.html)"),
+                                 h6("(More details on ", a("stat.ethz", href="https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/swiss.html", target="_blank"), ")."),
                                  h5("The app renders two plots: one for the unadjusted effect and a residual plot adjusting both the y and the x1 variable by taking the residual after having regressed x2. This gives the correct relationship between x1 and y."),
                                  h5("Additionally, the app prints the summary of the full linear regression including all variables."),
                                  h4("Reference"),
-                                 h5("The app was inspired by the Book Regression Models for Data Science In R by Brian Caffo, pp. 59-62, published 2015-08-05 (http://leanpub.com/regmods).")
-                                 )
+                                 h5("The app was inspired by the Book Regression Models for Data Science In R by Brian Caffo, pp. 59-62, published 2015-08-05 on ", a("leanpub", href="http://leanpub.com/regmods", target="_blank"), ".")
+                 )
             )        
         )    
     )
 )    
-
-
 
 
