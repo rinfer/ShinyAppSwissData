@@ -106,9 +106,9 @@ shinyServer(function(input, output) {
         }  else if (yl == "Examination") {
             fit <- lm(Examination ~ ., data = swiss); summary(fit)
         } else if (yl == "Education") {
-            fit <- lm(Examination ~ ., data = swiss); summary(fit)
+            fit <- lm(Education ~ ., data = swiss); summary(fit)
         } else if (yl == "Catholic") {
-            fit <- lm(Examination ~ ., data = swiss); summary(fit)
+            fit <- lm(Catholic ~ ., data = swiss); summary(fit)
         } else {
             fit <- lm(Infant.Mortality ~ ., data = swiss); summary(fit)
         }

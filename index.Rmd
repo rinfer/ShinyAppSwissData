@@ -15,7 +15,7 @@ This peer assessed assignment has two parts. First, you will create a Shiny appl
 ##App Documentary
 
 ###Context
-In the context of multivariate regression, the so-called “Simpson’s Paradox” points out, that unadjusted and adjusted effects can be the reverse of each other. In other words, the apparent relationship between X and Y may change when accounting for Z. Note, however, that this effect is in fact not at all a paradox but the logical consequence of multivariate regression depending on the compound impact of different regressors.
+In the context of multivariate regression, the so-called Simpson's Paradox points out, that unadjusted and adjusted effects can be the reverse of each other. In other words, the apparent relationship between X and Y may change when accounting for Z. Note, however, that this effect is in fact not at all a paradox but the logical consequence of multivariate regression depending on the compound impact of different regressors.
 
 The Swiss Data App visualizes this connection. It allows for playing around with different sets of output and regressor variables. 
 
@@ -244,9 +244,9 @@ shinyServer(function(input, output) {
         }  else if (yl == "Examination") {
             fit <- lm(Examination ~ ., data = swiss); summary(fit)
         } else if (yl == "Education") {
-            fit <- lm(Examination ~ ., data = swiss); summary(fit)
+            fit <- lm(Education ~ ., data = swiss); summary(fit)
         } else if (yl == "Catholic") {
-            fit <- lm(Examination ~ ., data = swiss); summary(fit)
+            fit <- lm(Catholic ~ ., data = swiss); summary(fit)
         } else {
             fit <- lm(Infant.Mortality ~ ., data = swiss); summary(fit)
         }
